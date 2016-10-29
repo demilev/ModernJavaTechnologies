@@ -7,7 +7,7 @@ public class Main {
 		ToDoListMenu menu = new ToDoListMenu(new ToDoList(generateTasks()));
 		menu.start();
 	}	
-
+	//todo
 	private static Task[] generateTasks() {
 		Task task1 = new Task("task1", "description of task1", Status.INITIAL, 3, LocalDate.of(2016, 10, 20));
 		Task task2 = new Task("task2", "description of task2", Status.IN_PROCESS, 3, LocalDate.of(2016, 10, 20));

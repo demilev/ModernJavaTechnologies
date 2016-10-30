@@ -39,8 +39,8 @@ public class Task implements Comparable<Task> {
 		return status != Status.DONE;
 	}
 
-	public boolean endsInThreeDays() {
-		LocalDate checkDate = LocalDate.now().plusDays(3);
+	public boolean endsIn(int days) {
+		LocalDate checkDate = LocalDate.now().plusDays(days);
 		return (date.isBefore(checkDate) || date.isEqual(checkDate))
 				&& (date.isAfter(LocalDate.now()) || date.isEqual(LocalDate.now()));
 	}

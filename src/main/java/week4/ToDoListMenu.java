@@ -11,30 +11,39 @@ public class ToDoListMenu {
 
 	public void start() {
 		Scanner scanner = new Scanner(System.in);
-		int option;
+		int option = -1;
 		do {
 			System.out.println("Choose option\n");
 			printOptions();
 			System.out.println("\nYour choice (1-4):");
-			option = scanner.nextInt();
-			switch (option) {
-			case 1:
-				list.printByPriority();
-				break;
-			case 2:
-				list.printTasksInProcess();
-				break;
-			case 3:
-				list.printUpcommingTasks();
-				break;
-			case 4:
-				break;
-			default:
-				System.out.println("Invalid input!");
-				break;
+			try {
+				option = parseInput(scanner);
+			} catch (IllegalArgumentException e) {
+				System.out.println("INVALID INPUT!" + e.getMessage() + "\n");
 			}
 		} while (option != 4);
 		scanner.close();
+	}
+
+	private int parseInput(Scanner scanner) {
+		int option = scanner.nextInt();
+		switch (option) {
+		case 1:
+			System.out.print(list.tasksByPriority());
+			break;
+		case 2:
+			System.out.print(list.tasksInProcess());
+			break;
+		case 3:
+			System.out.print(list.upcommingTasks());
+			break;
+		case 4:
+			System.out.println("Bye!");
+			break;
+		default:
+			throw new IllegalArgumentException("No such an option!");
+		}
+		return option;
 	}
 
 	private void printOptions() {

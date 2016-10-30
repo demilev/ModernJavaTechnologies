@@ -1,42 +1,48 @@
 package week4;
 
-import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ToDoList {
-	private Task[] tasks;
+	private static final int THREE_DAYS = 3;
+	private List<Task> tasks;
 
-	public ToDoList(Task[] tasks) {
+	public ToDoList() {
+		this.tasks = new LinkedList<Task>();
+	}
+	public ToDoList(List<Task> tasks) {
 		this.tasks = tasks;
 	}
 
-	public void printByPriority() {
-		System.out.println("Tasks ordered by priority:\n");
-		Arrays.sort(tasks);
-		for (Task task : tasks) {
-			System.out.println(task.toString());
-		}
-		System.out.println();
+	public void add(Task task) {
+		tasks.add(task);
 	}
 
-	public void printTasksInProcess() {
-		System.out.println("Tasks in process:\n");
-		Arrays.sort(tasks);
-		for (Task task : tasks) {
-			if (task.getStatus() == Status.IN_PROCESS) {
-				System.out.println(task.toString());
-			}
-		}
-		System.out.println();
+	public String tasksByPriority() {
+		StringBuilder result = new StringBuilder();
+		result.append("Tasks ordered by priority:\n");
+		Collections.sort(tasks);
+		tasks.stream().forEach(x -> result.append(x.toString()).append("\n"));
+		return result.append("\n").toString();
 	}
 
-	public void printUpcommingTasks() {
-		System.out.println("Tasks ending in 3 days:\n");
-		Arrays.sort(tasks);
-		for (Task task : tasks) {
-			if (task.isInProcess() && task.endsInThreeDays()) {
-				System.out.println(task.toString());
-			}
-		}
-		System.out.println();
+	public String tasksInProcess() {
+		StringBuilder result = new StringBuilder();
+		result.append("Tasks in process:\n");
+		Collections.sort(tasks);
+		tasks.stream().filter(task -> task.getStatus() == Status.IN_PROCESS)
+				.forEach(task -> result.append(task.toString()).append("\n"));
+		return result.append("\n").toString();
+	}
+
+	public String upcommingTasks() {
+		StringBuilder result = new StringBuilder();
+		result.append("Tasks ending in 3 days:\n");
+		Collections.sort(tasks);
+		tasks.stream().filter(task -> (task.isInProcess() && task.endsIn(THREE_DAYS)))
+				.forEach(task -> result.append(task.toString()).append("\n"));
+		return result.append("\n").toString();
+
 	}
 }

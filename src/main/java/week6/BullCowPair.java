@@ -1,4 +1,4 @@
-package week6;
+п»їpackage week6;
 
 public class BullCowPair {
 	int bulls;
@@ -13,15 +13,15 @@ public class BullCowPair {
 	public String toString() {
 		if (bulls == 1) {
 			if (cows == 1) {
-				return "1 бик, 1 крава";
+				return "1 Р±РёРє, 1 РєСЂР°РІР°";
 			} else {
-				return "1 бик, " + cows + " крави";
+				return "1 Р±РёРє, " + cows + " РєСЂР°РІРё";
 			}
 		} else {
 			if (cows == 1) {
-				return bulls + " бика, 1 крава";
+				return bulls + " Р±РёРєР°, 1 РєСЂР°РІР°";
 			} else {
-				return bulls + " бика, " + cows + " крави";
+				return bulls + " Р±РёРєР°, " + cows + " РєСЂР°РІРё";
 			}
 		}
 	}

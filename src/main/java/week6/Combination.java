@@ -80,6 +80,11 @@ public class Combination<T extends Inputable & Randomizable & Creatable<T>> {
 	public void input() {
 		for (int i = 0; i < combinationSize; i++) {
 			combination.get(i).input();
+			while(isNotUnique(combination.get(i),i)){
+				System.out.println("Не може да има повторения на елементи! Опитайте пак: ");
+				combination.get(i).input();
+			}
+			
 		}
 	}
 

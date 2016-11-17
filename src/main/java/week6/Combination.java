@@ -1,4 +1,4 @@
-package week6;
+ï»¿package week6;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,7 +81,7 @@ public class Combination<T extends Inputable & Randomizable & Creatable<T>> {
 		for (int i = 0; i < combinationSize; i++) {
 			combination.get(i).input();
 			while(isNotUnique(combination.get(i),i)){
-				System.out.println("Íå ìîæå äà èìà ïîâòîðåíèÿ íà åëåìåíòè! Îïèòàéòå ïàê: ");
+				System.out.println("ÐÐµ Ð¼Ð¾Ð¶Ðµ Ð´Ð° Ð¸Ð¼Ð° Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€ÐµÐ½Ð¸Ñ Ð½Ð° ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸! ÐžÐ¿Ð¸Ñ‚Ð°Ð¹Ñ‚Ðµ Ð¿Ð°Ðº: ");
 				combination.get(i).input();
 			}
 			

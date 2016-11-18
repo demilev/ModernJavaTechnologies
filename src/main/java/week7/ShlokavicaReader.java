@@ -1,4 +1,4 @@
-package week7;
+ï»¿package week7;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -21,94 +21,94 @@ public class ShlokavicaReader extends Reader {
 		int result;
 		switch (crrChar) {
 		case 'a':
-			result = (int) 'à';
+			result = (int) 'Ğ°';
 			break;
 		case 'b':
-			result = (int) 'á';
+			result = (int) 'Ğ±';
 			break;
 		case 'w':
-			result = (int) 'â';
+			result = (int) 'Ğ²';
 			break;
 		case 'g':
-			result = (int) 'ã';
+			result = (int) 'Ğ³';
 			break;
 		case 'd':
-			result = (int) 'ä';
+			result = (int) 'Ğ´';
 			break;
 		case 'e':
-			result = (int) 'å';
+			result = (int) 'Ğµ';
 			break;
 		case 'v':
-			result = (int) 'æ';
+			result = (int) 'Ğ¶';
 			break;
 		case 'z':
-			result = (int) 'ç';
+			result = (int) 'Ğ·';
 			break;
 		case 'i':
-			result = (int) 'è';
+			result = (int) 'Ğ¸';
 			break;
 		case 'j':
-			result = (int) 'é';
+			result = (int) 'Ğ¹';
 			break;
 		case 'k':
-			result = (int) 'ê';
+			result = (int) 'Ğº';
 			break;
 		case 'l':
-			result = (int) 'ë';
+			result = (int) 'Ğ»';
 			break;
 		case 'm':
-			result = (int) 'ì';
+			result = (int) 'Ğ¼';
 			break;
 		case 'n':
-			result = (int) 'í';
+			result = (int) 'Ğ½';
 			break;
 		case 'o':
-			result = (int) 'î';
+			result = (int) 'Ğ¾';
 			break;
 		case 'p':
-			result = (int) 'ï';
+			result = (int) 'Ğ¿';
 			break;
 		case 'r':
-			result = (int) 'ğ';
+			result = (int) 'Ñ€';
 			break;
 		case 's':
-			result = (int) 'ñ';
+			result = (int) 'Ñ';
 			break;
 		case 't':
-			result = (int) 'ò';
+			result = (int) 'Ñ‚';
 			break;
 		case 'u':
-			result = (int) 'ó';
+			result = (int) 'Ñƒ';
 			break;
 		case 'f':
-			result = (int) 'ô';
+			result = (int) 'Ñ„';
 			break;
 		case 'h':
-			result = (int) 'õ';
+			result = (int) 'Ñ…';
 			break;
 		case 'c':
-			result = (int) 'ö';
+			result = (int) 'Ñ†';
 			break;
 		case '`':
-			result = (int) '÷';
+			result = (int) 'Ñ‡';
 			break;
 		case '[':
-			result = (int) 'ø';
+			result = (int) 'Ñˆ';
 			break;
 		case ']':
-			result = (int) 'ù';
+			result = (int) 'Ñ‰';
 			break;
 		case 'y':
-			result = (int) 'ú';
+			result = (int) 'ÑŠ';
 			break;
 		case 'x':
-			result = (int) 'ü';
+			result = (int) 'ÑŒ';
 			break;
 		case '\\':
-			result = (int) 'ş';
+			result = (int) 'Ñ';
 			break;
 		case 'q':
-			result = (int) 'ÿ';
+			result = (int) 'Ñ';
 			break;
 		default:
 			result = (int) crrChar;

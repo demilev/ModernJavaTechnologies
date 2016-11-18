@@ -1,4 +1,4 @@
-package week7;
+п»їpackage week7;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -29,7 +29,7 @@ public class Translator {
 	}
 
 	private boolean endsWithKraj(StringBuilder sb) {
-		Pattern p = Pattern.compile(".*край");
+		Pattern p = Pattern.compile(".*РєСЂР°Р№");
 		Matcher m = p.matcher(sb.toString());
 		return m.find();
 	}
@@ -78,6 +78,6 @@ public class Translator {
 	public static void main(String[] args) {
 		Translator t = new Translator();
 		t.saveTranslatedTextToFile();
-		System.out.println("Броят на думите е: "+t.countTranslatedWords());
+		System.out.println("Р…СЂРѕВ¤С‚ РЅР° РґСѓРјРёС‚Рµ Рµ: "+t.countTranslatedWords());
 	}
 }

@@ -1,13 +1,9 @@
 ﻿package week7;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Translator {
 
@@ -17,7 +13,7 @@ public class Translator {
 		StringBuilder sb = new StringBuilder();
 		try (ShlokavicaReader sr = new ShlokavicaReader(new InputStreamReader(System.in))) {
 			int c = 0;
-			while ((c = sr.read()) != -1 && !endsWithKraj(sb)) {
+			while ((c = sr.read()) != -1 && !sb.toString().endsWith("край")) {
 				sb.append((char) c);
 			}
 		} catch (IOException e) {
@@ -25,12 +21,6 @@ public class Translator {
 		}
 		String result = sb.toString();
 		return result.substring(0, result.length() - 4);
-	}
-
-	private boolean endsWithKraj(StringBuilder sb) {
-		Pattern p = Pattern.compile(".*край");
-		Matcher m = p.matcher(sb.toString());
-		return m.find();
 	}
 
 	public void saveTranslatedTextToFile() {

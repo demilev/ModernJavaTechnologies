@@ -26,7 +26,8 @@ public class WordCounter {
 
 	private int countWords(String text) {
 		int result = 0;
-		Pattern p = Pattern.compile("\\b([^\\s\\d]+?)\\b");
+		Pattern p = Pattern.compile("\\b([^\\s\\d]+?)\\b"); //this regex does not catch all cases
+															//but works very well in most of them
 		Matcher m = p.matcher(text);
 		while (m.find()) {
 			result++;

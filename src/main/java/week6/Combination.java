@@ -25,8 +25,8 @@ public class Combination<T extends Inputable & Randomizable & Creatable<T>> {
 	}
 
 	private boolean isNotUnique(T t, int i) {
-		for(int k=0;k<combinationSize;k++){
-			if(i!=k&&combination.get(k).equals(t)){
+		for (int k = 0; k < combinationSize; k++) {
+			if (i != k && combination.get(k).equals(t)) {
 				return true;
 			}
 		}
@@ -80,11 +80,11 @@ public class Combination<T extends Inputable & Randomizable & Creatable<T>> {
 	public void input() {
 		for (int i = 0; i < combinationSize; i++) {
 			combination.get(i).input();
-			while(isNotUnique(combination.get(i),i)){
+			while (isNotUnique(combination.get(i), i)) {
 				System.out.println("Не може да има повторения на елементи! Опитайте пак: ");
 				combination.get(i).input();
 			}
-			
+
 		}
 	}
 

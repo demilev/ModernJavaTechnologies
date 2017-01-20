@@ -5,9 +5,7 @@ import java.nio.file.Paths;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-// to do 
-// improve oop designe
-// use countdownlatch and concurant api
+
 public class WorkDay {
 	public static void main(String[] args) throws InterruptedException {
 		int N = 5;
